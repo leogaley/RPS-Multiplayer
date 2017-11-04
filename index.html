@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>ROCK PAPER SCISSORS</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <br>
+
+      <!-- Jumbotron Title -->
+      <div class="jumbotron">
+        <h1 class="text-center">RPS</h1>
+        <h3 class="text-center">"MANO E MANO (OR WOMANO)"</h3>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title" id="player-1-title">PLAYER 1</h3>
+              <br>
+              <form role="form">
+                <div class="form-group" id="p1-form">
+                  <label for="Name">Enter Your Name:</label>
+                  <input type="text" class="form-control" id="name1">
+                  <input type="submit" class="btn btn-large btn-primary" id="player-1-start" value="Sign In">
+                     
+                  </input>
+                </div>
+                
+                <h2 id="p1-currentPick"></h2>
+             
+              </form>
+            </div>
+            <div class="hidden panel-body" id="choices1">
+               <div class="choices" data-selection="rock" id="p1-rock">ROCK</div>
+               <br>
+               <div class="choices" data-selection="paper" id="p1-paper">PAPER</div>
+               <br>
+               <div class="choices" data-selection="scissors" id="p1-scissors">SCISSORS</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+
+            </div>
+            <div class="panel-body" id="message">
+
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              CHAT            
+            </div>
+            <div class="panel-body" id="messagesDiv">
+
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="messageInput">
+                </div>
+             
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title" id="player-2-title">PLAYER 2</h3>
+              <br>
+              <form role="form">
+                <div class="form-group" id="p2-form">
+                  <label for="Name">Enter Your Name:</label>
+                  <input type="text" class="form-control" id="name2">
+                  <input type="submit" class="btn btn-large btn-primary" id="player-2-start" value="Sign In">
+                    
+                  </input>
+                </div>
+              </form>
+               <h2 id="p2-currentPick"></h2>
+            </div>
+            <div class="hidden panel-body" id="choices2">
+               <div class="choices" data-selection="rock" id="p2-rock">ROCK</div>
+               <br>
+               <div class="choices" data-selection="paper" id="p2-paper">PAPER</div>
+               <br>
+               <div class="choices" data-selection="scissors" id="p2-scissors">SCISSORS</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="assets/app.js"></script>
+
+  </body>
+
+</html>
